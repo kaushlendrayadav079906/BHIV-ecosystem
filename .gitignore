@@ -1,0 +1,31 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large weights and datasets
+weights/species_model.pth
+app/datasets/
+*.zip
+*.pth
+*.pt
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Keep gitkeep files
+!**/weights/.gitkeep
+!**/training/.gitkeep
+!**/app/datasets/.gitkeep

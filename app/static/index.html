@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Intelligence Capability - Image Analysis</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌿 Plant Intelligence Capability</h1>
+            <p>Advanced Agricultural Evidence Generation System</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="card upload-card">
+                    <h2>📤 Upload Plant Image</h2>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <p>Drag and drop your plant image here</p>
+                            <p class="upload-text">or click to select</p>
+                        </div>
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                    </div>
+                    <div id="imagePreview" class="image-preview" style="display: none;">
+                        <img id="previewImg" src="" alt="Preview">
+                        <p id="fileName"></p>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="analyzeBtn" class="btn btn-primary" disabled>
+                        <span class="btn-text">🔍 Analyze Plant</span>
+                        <span class="spinner" id="spinner" style="display: none;"></span>
+                    </button>
+                    <button id="identifyBtn" class="btn btn-secondary" disabled>Quick Identify</button>
+                    <button id="clearBtn" class="btn btn-danger">Clear</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="card results-card">
+                    <div class="results-header">
+                        <h2>📊 Analysis Results</h2>
+                        <button id="copyBtn" class="btn btn-small">📋 Copy JSON</button>
+                    </div>
+
+                    <!-- Quick Info -->
+                    <div class="quick-info" id="quickInfo"></div>
+
+                    <!-- Observations -->
+                    <div class="observations-section" id="observationsSection" style="display: none;">
+                        <h3>🔬 Structured Agricultural Evidence</h3>
+                        <div id="observationsList" class="observations-list"></div>
+                    </div>
+
+                    <!-- JSON Display -->
+                    <div class="json-section">
+                        <h3>📄 Full JSON Response</h3>
+                        <pre id="jsonOutput" class="json-output"></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section id="errorSection" class="card error-card" style="display: none;">
+                <h3>⚠️ Error</h3>
+                <p id="errorMessage"></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Plant Intelligence Capability v1.0.0 | Agricultural Evidence Engine</p>
+            <p><a href="/docs">API Documentation (Swagger)</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
