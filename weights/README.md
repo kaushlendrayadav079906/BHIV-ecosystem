@@ -1,0 +1,1 @@
+Specie_model.pth file :- https://drive.google.com/file/d/1O_YYbLSugvCWPPVym1ZERFfUzDehw7na/view?usp=sharing
